@@ -1,5 +1,5 @@
 ```bash
-➜ npx create-next-app@latest hr-dashboard
+➜ npx create-next-app@latest shift-manager
     √ Would you like to use TypeScript? ... Yes
     √ Which linter would you like to use? » ESLint
     √ Would you like to use Tailwind CSS? ... Yes
