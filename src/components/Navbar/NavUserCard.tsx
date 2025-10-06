@@ -3,7 +3,7 @@ import { Card, Stack, Avatar, Box, Typography, IconButton } from "@mui/material"
 
 export default function NavUserCard() {
   return (
-    <Card sx={{ p: 4, bgcolor: "inherit", color: "inherit" }}>
+    <Card sx={{ p: 4 }}>
       <Stack direction="row" spacing={2} alignItems="center">
         <Avatar alt="John Doe" src="/path/to/avatar.jpg" sx={{ width: 56, height: 56 }} />
 

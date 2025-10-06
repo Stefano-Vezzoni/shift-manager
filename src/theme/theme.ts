@@ -60,6 +60,13 @@ const theme = createTheme({
   palette: {
     primary: { main: "#1976d2" },
     secondary: { main: "#9c27b0" },
+    background: { default: "#131821", paper: "#131821" },
+    text: {
+      primary: "#ffffff",
+      secondary: "rgba(255, 255, 255, 0.7)",
+      disabled: "rgba(255, 255, 255, 0.5)",
+    },
+    divider: "rgba(255, 255, 255, 0.3)",
   },
 });
 

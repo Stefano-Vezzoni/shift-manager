@@ -5,20 +5,13 @@ import NavUserCard from "./NavUserCard";
 
 export default function Navbar() {
   return (
-    <Box
-      display={"flex"}
-      flexDirection="column"
-      component="nav"
-      width={280}
-      color="white"
-      bgcolor="grey.900"
-    >
+    <Box display={"flex"} flexDirection="column" component="nav" width={280}>
       <CompanyLogo />
-      <Divider color="white" />
+      <Divider />
       <NavLinks />
 
       <Stack sx={{ mt: "auto" }}>
-        <Divider color="white" />
+        <Divider />
         <NavUserCard />
       </Stack>
     </Box>
