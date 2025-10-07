@@ -13,7 +13,7 @@ export default function NavUserCard() {
         </Box>
 
         <IconButton aria-label="sign out" size="small" color="inherit" sx={{ marginRight: "auto" }}>
-          <Logout fontSize="medium" />
+          <Logout fontSize="small" />
         </IconButton>
       </Stack>
     </Card>
