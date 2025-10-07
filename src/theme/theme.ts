@@ -1,6 +1,16 @@
 "use client";
 import { createTheme } from "@mui/material/styles";
 
+const BUTTON_HEIGHT = 40;
+
+const sharedButtonStyles = {
+  border: "1px solid",
+  borderColor: "#64748b",
+  background: "#151C25",
+  borderRadius: 8,
+  "&:hover": { backgroundColor: "#1D2634" },
+};
+
 const theme = createTheme({
   cssVariables: true,
   components: {
@@ -8,6 +18,26 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textDecoration: "none",
+          color: "inherit",
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          ...sharedButtonStyles,
+          height: BUTTON_HEIGHT,
+          minWidth: BUTTON_HEIGHT,
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          ...sharedButtonStyles,
+          height: BUTTON_HEIGHT,
+          minWidth: BUTTON_HEIGHT,
           color: "inherit",
         },
       },
@@ -62,9 +92,9 @@ const theme = createTheme({
     secondary: { main: "#9c27b0" },
     background: { default: "#131821", paper: "#131821" },
     text: {
-      primary: "#ffffff",
-      secondary: "rgba(255, 255, 255, 0.7)",
-      disabled: "rgba(255, 255, 255, 0.5)",
+      primary: "#cbd5e1",
+      secondary: "#94a3b8",
+      disabled: "#64748b",
     },
     divider: "rgba(255, 255, 255, 0.3)",
   },
