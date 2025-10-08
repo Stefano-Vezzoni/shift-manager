@@ -1,5 +1,6 @@
 "use client";
 import { createTheme } from "@mui/material/styles";
+import type {} from "@mui/x-data-grid/themeAugmentation";
 
 const BUTTON_HEIGHT = 40;
 
@@ -39,6 +40,43 @@ const theme = createTheme({
           height: BUTTON_HEIGHT,
           minWidth: BUTTON_HEIGHT,
           color: "inherit",
+        },
+      },
+    },
+    MuiDataGrid: {
+      styleOverrides: {
+        root: {
+          border: "1px solid #64748b",
+          borderRadius: 8,
+          background: "#151C25",
+          color: "inherit",
+
+          "& .MuiDataGrid-cell": {
+            borderColor: "#64748b",
+          },
+
+          "& .MuiDataGrid-footerContainer": {
+            borderTop: "1px solid #64748b",
+          },
+
+          "& .MuiDataGrid-columnHeaders::after": {
+            content: '""',
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "1px",
+            backgroundColor: "#64748b",
+          },
+
+          "& .MuiTablePagination-selectLabel, & .MuiSelect-select, & .MuiSvgIcon-root, & .MuiTablePagination-actions button":
+            {
+              color: "inherit",
+              "&.Mui-disabled": {
+                color: "#64748b",
+                opacity: 1,
+              },
+            },
         },
       },
     },
