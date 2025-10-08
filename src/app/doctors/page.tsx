@@ -1,3 +1,4 @@
+import DataTableShell from "@/components/DataTableShell/DataTableShell";
 import Navbar from "@/components/Navbar/Navbar";
 import StyledButton from "@/components/StyledButton/StyledButton";
 import { PersonAdd, FilterList, FileDownload, Refresh } from "@mui/icons-material";
@@ -9,10 +10,10 @@ export default function Doctors() {
       <Navbar />
       <Divider orientation="vertical" flexItem />
 
-      <Box component="main" flexGrow={1} paddingX={12} paddingY={8}>
+      <Box component="main" flexGrow={1} px={12} py={8}>
         <Typography variant="h1">Doctors</Typography>
 
-        <Box display={"flex"} py={4} gap={2}>
+        <Box display={"flex"} pt={4} pb={1} gap={2}>
           <Box display={"flex"} gap={1}>
             <StyledButton label="New Doctor" startIcon={<PersonAdd />} />
             <StyledButton startIcon={<FilterList />} tooltip="Filter" />
@@ -20,6 +21,8 @@ export default function Doctors() {
             <StyledButton startIcon={<Refresh />} tooltip="Reload" />
           </Box>
         </Box>
+
+        <DataTableShell />
       </Box>
     </Box>
   );
