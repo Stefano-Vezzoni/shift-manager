@@ -1,0 +1,43 @@
+export const typography = {
+  fontFamily: "var(--font-inter)",
+  body1: {
+    fontSize: "0.875rem",
+    lineHeight: 1.43,
+  },
+  body2: {
+    fontSize: "0.75rem",
+    lineHeight: 1.5,
+  },
+  h1: {
+    fontFamily: "var(--font-montserrat)",
+    fontWeight: 700,
+    fontSize: "2rem",
+  },
+  h2: {
+    fontFamily: "var(--font-montserrat)",
+    fontWeight: 600,
+    fontSize: "1.6rem",
+  },
+  h3: {
+    fontFamily: "var(--font-montserrat)",
+    fontWeight: 600,
+    fontSize: "1.4rem",
+  },
+  h4: {
+    fontFamily: "var(--font-montserrat)",
+    fontWeight: 500,
+    fontSize: "1.2rem",
+  },
+  h5: {
+    fontFamily: "var(--font-montserrat)",
+    fontWeight: 500,
+    lineHeight: 1.5,
+    fontSize: "1rem",
+  },
+  h6: {
+    fontFamily: "var(--font-montserrat)",
+    fontSize: "0.875rem",
+    lineHeight: 1.43,
+    fontWeight: 500,
+  },
+};
