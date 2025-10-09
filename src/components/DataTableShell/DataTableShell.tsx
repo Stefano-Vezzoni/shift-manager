@@ -1,6 +1,7 @@
 "use client";
 import { Box } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { Check, Close } from "@mui/icons-material";
 
 const columns: GridColDef<(typeof rows)[number]>[] = [
   { field: "id", headerName: "ID", flex: 0.5 },
@@ -15,25 +16,34 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
     flex: 1.5,
   },
   {
-    field: "specialty",
-    headerName: "Specialty",
-  },
-  {
     field: "phone",
     headerName: "Phone",
     flex: 1,
   },
   {
-    field: "active",
-    headerName: "Active",
+    field: "specialty",
+    headerName: "Specialty",
+    align: "center",
+    headerAlign: "center",
   },
   {
     field: "hourlyRate",
+    flex: 1,
     headerName: "Hourly Rate",
+    align: "center",
+    headerAlign: "center",
   },
   {
-    field: "availability",
-    headerName: "Availability",
+    field: "available",
+    headerName: "Available",
+    width: 90,
+    align: "center",
+    headerAlign: "center",
+    renderCell: (params) => (params.value ? <Check color="success" /> : <Close color="error" />),
+  },
+  {
+    field: "workingDays",
+    headerName: "Working Days",
     flex: 2,
   },
   {
@@ -50,9 +60,9 @@ const rows = [
     email: "joao.silva@medico.com",
     specialty: 1,
     phone: "(11) 98765-4321",
-    active: true,
+    available: false,
     hourlyRate: 150,
-    availability: ["Segunda", "Terça", "Quarta"],
+    workingDays: ["Segunda", "Terça", "Quarta"],
     actions: "",
   },
   {
@@ -61,9 +71,9 @@ const rows = [
     email: "maria.santos@medico.com",
     specialty: 2,
     phone: "(11) 98765-1234",
-    active: true,
+    available: true,
     hourlyRate: 180,
-    availability: ["Terça", "Quinta", "Sexta"],
+    workingDays: ["Terça", "Quinta", "Sexta"],
     actions: "",
   },
   {
@@ -72,9 +82,9 @@ const rows = [
     email: "pedro.costa@medico.com",
     specialty: 3,
     phone: "(11) 98765-5678",
-    active: true,
+    available: true,
     hourlyRate: 200,
-    availability: ["Segunda", "Quarta", "Sexta", "Sábado"],
+    workingDays: ["Segunda", "Quarta", "Sexta", "Sábado"],
     actions: "",
   },
   {
@@ -83,9 +93,9 @@ const rows = [
     email: "ana.oliveira@medico.com",
     specialty: 4,
     phone: "(11) 98765-9999",
-    active: true,
+    available: true,
     hourlyRate: 170,
-    availability: ["Segunda", "Terça", "Quinta"],
+    workingDays: ["Segunda", "Terça", "Quinta"],
     actions: "",
   },
   {
@@ -94,9 +104,9 @@ const rows = [
     email: "carlos.mendes@medico.com",
     specialty: 5,
     phone: "(11) 98765-7777",
-    active: true,
+    available: true,
     hourlyRate: 220,
-    availability: ["Terça", "Quarta", "Quinta", "Sexta"],
+    workingDays: ["Terça", "Quarta", "Quinta", "Sexta"],
     actions: "",
   },
   {
@@ -105,9 +115,9 @@ const rows = [
     email: "fernando.alves@medico.com",
     specialty: 2,
     phone: "(11) 98765-3333",
-    active: true,
+    available: true,
     hourlyRate: 175,
-    availability: ["Segunda", "Quinta", "Sábado", "Domingo"],
+    workingDays: ["Segunda", "Quinta", "Sábado", "Domingo"],
     actions: "",
   },
   {
@@ -116,9 +126,9 @@ const rows = [
     email: "paula.costa@medico.com",
     specialty: 6,
     phone: "(11) 98765-2222",
-    active: true,
+    available: true,
     hourlyRate: 190,
-    availability: ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"],
+    workingDays: ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"],
     actions: "",
   },
   {
@@ -127,9 +137,9 @@ const rows = [
     email: "roberto.lima@medico.com",
     specialty: 7,
     phone: "(11) 98765-8888",
-    active: true,
+    available: true,
     hourlyRate: 210,
-    availability: ["Quarta", "Quinta", "Sexta", "Sábado"],
+    workingDays: ["Quarta", "Quinta", "Sexta", "Sábado"],
     actions: "",
   },
   {
@@ -138,9 +148,9 @@ const rows = [
     email: "juliana.pereira@medico.com",
     specialty: 8,
     phone: "(11) 98765-6666",
-    active: true,
+    available: true,
     hourlyRate: 185,
-    availability: ["Segunda", "Terça", "Quinta", "Sexta"],
+    workingDays: ["Segunda", "Terça", "Quinta", "Sexta"],
     actions: "",
   },
   {
@@ -149,9 +159,9 @@ const rows = [
     email: "marcelo.santos@medico.com",
     specialty: 9,
     phone: "(11) 98765-1111",
-    active: true,
+    available: true,
     hourlyRate: 195,
-    availability: ["Terça", "Quarta", "Quinta", "Sábado", "Domingo"],
+    workingDays: ["Terça", "Quarta", "Quinta", "Sábado", "Domingo"],
     actions: "",
   },
 ];
