@@ -51,6 +51,14 @@ const theme = createTheme({
           background: "#151C25",
           color: "inherit",
 
+          "& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within": {
+            outline: "none",
+          },
+
+          "& .MuiDataGrid-columnHeader:focus, & .MuiDataGrid-columnHeader:focus-within": {
+            outline: "none",
+          },
+
           "& .MuiDataGrid-cell": {
             borderColor: "#64748b",
           },
@@ -67,6 +75,10 @@ const theme = createTheme({
             width: "100%",
             height: "1px",
             backgroundColor: "#64748b",
+          },
+
+          "& .MuiDataGrid-columnHeaderTitleContainer": {
+            justifyContent: "space-between",
           },
 
           "& .MuiTablePagination-selectLabel, & .MuiSelect-select, & .MuiSvgIcon-root, & .MuiTablePagination-actions button":
