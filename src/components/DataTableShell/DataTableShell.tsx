@@ -1,6 +1,5 @@
 "use client";
-import { Box, Paper } from "@mui/material";
-import { ptBR } from "@mui/material/locale";
+import { Box } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 const columns: GridColDef<(typeof rows)[number]>[] = [
@@ -160,7 +159,7 @@ const rows = [
 export default function DataTableShell() {
   return (
     <Box>
-      <DataGrid rows={rows} columns={columns} />
+      <DataGrid rows={rows} columns={columns} disableColumnMenu />
     </Box>
   );
 }
