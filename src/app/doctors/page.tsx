@@ -1,8 +1,8 @@
-import DataTableShell from "@/components/DataTableShell/DataTableShell";
 import Navbar from "@/components/Navbar/Navbar";
 import StyledButton from "@/components/StyledButton/StyledButton";
 import { PersonAdd, FilterList, FileDownload, Refresh } from "@mui/icons-material";
 import { Box, Divider, Typography } from "@mui/material";
+import DoctorsDataTable from "./DoctorsDataTable";
 
 export default function Doctors() {
   return (
@@ -22,7 +22,7 @@ export default function Doctors() {
           </Box>
         </Box>
 
-        <DataTableShell />
+        <DoctorsDataTable />
       </Box>
     </Box>
   );
