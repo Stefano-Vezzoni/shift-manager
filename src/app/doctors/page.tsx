@@ -3,6 +3,7 @@ import StyledButton from "@/components/StyledButton/StyledButton";
 import { PersonAdd, FilterList, FileDownload, Refresh } from "@mui/icons-material";
 import { Box, Divider, Typography } from "@mui/material";
 import DoctorsDataTable from "./DoctorsDataTable";
+import ModalFormShell from "@/components/ModalFormShell/ModalFormShell";
 
 export default function Doctors() {
   return (
@@ -23,6 +24,8 @@ export default function Doctors() {
         </Box>
 
         <DoctorsDataTable />
+
+        <ModalFormShell />
       </Box>
     </Box>
   );
