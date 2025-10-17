@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { TDoctorData } from "@/app/doctors/MockDoctorsData";
+import { TDoctorData } from "@/utils/MockDoctorsData";
 
 interface IDataTableShell {
   columns: GridColDef<TDoctorData>[];
