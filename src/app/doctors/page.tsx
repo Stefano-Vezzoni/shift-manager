@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import StyledButton from "@/components/StyledButton/StyledButton";
 import { PersonAdd, FilterList, FileDownload, Refresh } from "@mui/icons-material";
 import { Box, Divider, Typography } from "@mui/material";
-import DoctorsDataTable from "./DoctorsDataTable";
-import NewDoctorModal from "./NewDoctorModal";
+import DoctorsDataTable from "./components/DoctorsDataTable";
+import NewDoctorModal from "./components/NewDoctorModal";
 
 export default function Doctors() {
   return (

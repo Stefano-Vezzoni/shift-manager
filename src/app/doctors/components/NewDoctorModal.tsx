@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { formatPhone } from "@/utils/FormatPhone";
 import StyledButton from "@/components/StyledButton/StyledButton";
-import ModalWorkingDays from "./components/ModalWorkingDays";
+import ModalWorkingDays from "./ModalWorkingDays";
 
 interface INewDoctorModalProps {
   title: string;
