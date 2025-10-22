@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { formatPhone } from "@/utils/FormatPhone";
 import StyledButton from "@/components/StyledButton/StyledButton";
-import ModalWorkingDays from "./ModalWorkingDays";
+import ModalWorkingDays from "./WorkingDaysModal";
 
 interface INewDoctorModalProps {
   title: string;
@@ -37,7 +37,7 @@ export default function NewDoctorModal({ title }: INewDoctorModalProps) {
         <Typography variant="h2">{title}</Typography>
       </DialogTitle>
       <DialogContent sx={{ px: 6, display: "flex", flexDirection: "column", gap: 2 }}>
-        <TextField id="nomeCompleto" label="Nome Completo" variant="standard" />
+        <TextField id="name" label="Name" variant="standard" />
         <Stack display="flex" flexDirection="row" gap={2}>
           <TextField id="email" label="Email" variant="standard" />
           <TextField
