@@ -15,6 +15,7 @@ import { MuiButton } from "./components/MuiButton";
 import { MuiTextField } from "./components/MuiTextField";
 import { MuiToggleButton, MuiToggleButtonGroup } from "./components/MuiToggleButton";
 import { MuiDialog } from "./components/MuiDialog";
+import { MuiInputLabel } from "./components/MuiInputLabel";
 
 const theme = createTheme({
   cssVariables: true,
@@ -32,6 +33,7 @@ const theme = createTheme({
     MuiToggleButton,
     MuiToggleButtonGroup,
     MuiDialog,
+    MuiInputLabel,
   },
 });
 
