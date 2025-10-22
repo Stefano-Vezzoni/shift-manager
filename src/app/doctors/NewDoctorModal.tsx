@@ -8,13 +8,11 @@ import {
   Stack,
   Switch,
   TextField,
-  ToggleButton,
-  ToggleButtonGroup,
   Typography,
 } from "@mui/material";
-import { WEEK_DAYS } from "@/utils/WeekDaysData";
 import { formatPhone } from "@/utils/FormatPhone";
 import StyledButton from "@/components/StyledButton/StyledButton";
+import ModalWorkingDays from "./components/ModalWorkingDays";
 
 interface INewDoctorModalProps {
   title: string;
@@ -79,21 +77,10 @@ export default function NewDoctorModal({ title }: INewDoctorModalProps) {
           <Switch defaultChecked />
         </Stack>
 
-        <Stack display="flex" sx={{ flexDirection: "column", gap: 1, mt: 2 }}>
-          <Typography>Working Days</Typography>
-          <ToggleButtonGroup
-            value={workingDays}
-            onChange={handleWorkingDaysChange}
-            aria-label="working days"
-            sx={{ flexWrap: "wrap", gap: 1 }}
-          >
-            {WEEK_DAYS.map((day) => (
-              <ToggleButton key={day.value} value={day.value} aria-label={day.value}>
-                {day.label}
-              </ToggleButton>
-            ))}
-          </ToggleButtonGroup>
-        </Stack>
+        <ModalWorkingDays
+          handleWorkingDaysChange={handleWorkingDaysChange}
+          workingDays={workingDays}
+        />
       </DialogContent>
       <DialogActions sx={{ px: 4, pb: 3 }}>
         <StyledButton label="Create" />
