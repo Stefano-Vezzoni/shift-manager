@@ -4,6 +4,7 @@ import { PersonAdd, FilterList, FileDownload, Refresh } from "@mui/icons-materia
 import { Box, Divider, Typography } from "@mui/material";
 import DoctorsDataTable from "./components/DoctorsDataTable";
 import NewDoctorModal from "./components/NewDoctorModal";
+import DoctorFilterModal from "./components/DoctorFilterModal";
 
 export default function Doctors() {
   return (
@@ -26,6 +27,7 @@ export default function Doctors() {
         <DoctorsDataTable />
 
         <NewDoctorModal title="New Doctor" />
+        <DoctorFilterModal title="Filter Doctors" />
       </Box>
     </Box>
   );
