@@ -15,19 +15,36 @@ type TStyledButton =
 
 interface IStyledButtonProps {
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 type TStyledButtonProps = TStyledButton & IStyledButtonProps;
 
-export default function StyledButton({ label, startIcon, tooltip, onClick }: TStyledButtonProps) {
+export default function StyledButton({
+  label,
+  startIcon,
+  tooltip,
+  onClick,
+  type = "button",
+  disabled = false,
+}: TStyledButtonProps) {
   const isIconOnly = !label && startIcon;
 
   return isIconOnly ? (
     <Tooltip title={tooltip}>
-      <IconButton>{startIcon}</IconButton>
+      <IconButton onClick={onClick} type={type} disabled={disabled}>
+        {startIcon}
+      </IconButton>
     </Tooltip>
   ) : (
-    <Button variant="contained" startIcon={startIcon}>
+    <Button
+      variant="contained"
+      startIcon={startIcon}
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+    >
       <Typography variant="body2">{label}</Typography>
     </Button>
   );
