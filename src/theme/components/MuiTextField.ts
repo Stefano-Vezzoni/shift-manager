@@ -22,6 +22,17 @@ export const MuiTextField = {
       "& input": {
         caretColor: "#cbd5e1",
       },
+      "& input[type=number]": {
+        MozAppearance: "textfield",
+      },
+      "& input[type=number]::-webkit-outer-spin-button": {
+        WebkitAppearance: "none",
+        margin: 0,
+      },
+      "& input[type=number]::-webkit-inner-spin-button": {
+        WebkitAppearance: "none",
+        margin: 0,
+      },
       "& .MuiInputLabel-root": {
         color: "#94a3b8",
       },
